@@ -3,8 +3,8 @@ nixPkgs = ["...", "python311Packages.supervisor"]
 
 [phases.build]
 cmds = [
-    "mkdir -p /app/storage/logs"
-    "mkdir -p /etc/supervisor/conf.d/",:
+    "mkdir -p /app/storage/logs",
+    "mkdir -p /etc/supervisor/conf.d/",
     "touch /app/database/database.sqlite",
     "touch /app/storage/logs/laravel.log",
     "chmod -R 775 /app/storage /app/bootstrap/cache",
