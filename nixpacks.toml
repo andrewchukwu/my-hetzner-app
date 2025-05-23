@@ -4,7 +4,7 @@ nixPkgs = ["...", "python311Packages.supervisor"]
 [phases.build]
 cmds = [
     "chmod -R 775 /app/storage /app/bootstrap/cache",
-    "chown -R www-data:www-data /app/storage /app/bootstrap/cache",
+    "chown -R www-data:www-data /app /app/storage /app/bootstrap/cache",
     "composer install --optimize-autoloader --no-dev",
     "mkdir -p /etc/supervisor/conf.d/",
     "touch /app/database/database.sqlite",
